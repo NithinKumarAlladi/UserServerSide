@@ -13,7 +13,7 @@ app.get('/',(req,res)=>{
 });
 app.get('/show',(req, res)=>{
     res.setHeader('Access-Control-Allow-Origin','*');
-    console.log("request" + req);
+    console.log("request is " + req);
     res.send({
         name:'Nithin kumar',
         surname:'Alladi'
@@ -29,7 +29,7 @@ app.get('/users/:id',(req,res)=>{
 });
 
 app.post('/data',(req,res)=>{
-    res.setHeader('Access-Control-Allow-Origin','*');
     console.log(req.body);
+    res.setHeader('Access-Control-Allow-Origin','*');
     res.send('your data is stored');
 })
